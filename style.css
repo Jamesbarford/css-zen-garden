@@ -1,0 +1,469 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+@import url('https://fonts.googleapis.com/css?family=Karla');
+/* basic elements */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+	font-family: 'Karla', sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*
+ * My styles
+ */
+
+html {
+	-webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 40px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.20;
+	opacity: 1.00;
+	margin-bottom: 5px;
+  padding-bottom: 30px;
+	padding-top: 30px;
+	letter-spacing: -0.72px;
+	word-spacing: 0.00px;
+	text-transform: none;
+}
+
+p {
+	line-height: 1.60;
+	font-size: 18px;
+	opacity: .7;
+	padding-bottom: 25px;
+	letter-spacing: -0.30px;
+	word-spacing: -0.10px;
+	text-transform: none;
+}
+
+/*
+ * overall site
+ */
+
+ /*
+  * TOP navigation
+  */
+
+ .design-archives {
+ 	position: fixed;
+ 	top: 0;
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
+ 	background-color: #BCDEE8;
+ 	background-color: rgba(188, 222, 232, 0.8);
+ 	width: 100%;
+ 	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+ }
+
+ @media (max-width: 390px) {
+ 	.design-archives {
+ 		justify-content: center;
+ 	}
+ }
+
+ .design-archives li{
+ 	display: inline-block;
+ 	padding-left: 10px;
+ }
+
+ .design-archives ul {
+ 	padding-top: 7px;
+ 	padding-left: 10px;
+ 	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+ 	flex-direction: row-reverse;
+ }
+
+ @media (max-width: 390px) {
+ 	.design-archives ul {
+ 		padding-left: 0px;
+ 	}
+ }
+
+ .design-archives a {
+ 	color: #333;
+ 	text-decoration: none;
+ 	border-bottom: 2px solid #333;
+ 	transition: .3s ease-in;
+ }
+
+ .design-archives a:hover {
+ 	background-color: #333;
+ 	color: #BCDEE8;
+ 	transition: .3s ease-in;
+ }
+
+ h3.archives  {
+ 	margin-bottom: 0 !important;
+ 	padding-top: 0 !important;
+ 	padding-left: 50px;
+  padding-bottom: 0;
+ }
+
+ @media (max-width: 390px) {
+ 	h3.archives  {
+ 		display: none;
+		padding-left: 20px;
+ 	}
+ }
+
+/*
+ * Main splash
+ */
+
+header {
+	height: 100vh;
+	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	width: 100%;
+
+}
+
+header::after {
+  background-color: #448B99;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  content: '';
+}
+
+@media (min-width : 320px) and (max-width : 1024px) {
+	header {
+		text-align: center;
+	}
+}
+
+
+@media (min-width: 320px) and (max-width: 740px) {
+	header h1 {
+		margin-top: -120px;
+	}
+}
+
+.summary {
+	position: absolute;
+	top: 60%;
+	width: 100%;
+	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+	.summary {
+		padding-left: 20px;
+	}
+}
+
+p:first-child {
+	color: #fff;
+}
+
+.summary p:nth-child(2)  {
+	color: #fff;
+}
+
+.summary a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	border-bottom: 2px solid #FFDCA7;
+	transition: .3s ease-in;
+}
+
+.summary a:hover {
+	background-color: #FFDCA7;
+	color: #fff;
+	opacity: 1 !important;
+	transition: .3s ease-in;
+}
+
+/*
+ * preamble W/sidebar
+ */
+
+.preamble p {
+	width: 75%;
+
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+	.preamble p {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+.preamble {
+	height: 80vh;
+	width: 50%;
+  padding-left: 50px;
+	background-color: #D7FFEF;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+	.preamble {
+		height: auto;
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.design-selection {
+	position: absolute;
+	right: 0;
+	top: 100vh;
+	width: 50%;
+	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+	flex-direction: column;
+	align-items: center;
+	height: 80vh;
+	background-color: #D7FFEF;
+}
+
+@media (min-width: 318px) and (max-width: 800px) {
+	.design-selection {
+		top: 0;
+		width: auto;
+		position: relative;
+		height: auto;
+		padding-bottom: 40px;
+	}
+}
+
+.design-selection ul a {
+	color: #333;
+  font-weight: bold;
+  transition: 0.3s ease-in;
+}
+
+.design-selection ul a:hover {
+	color: #fff;
+  background: #333;
+  transition: 0.3s ease-in;
+}
+
+.design-selection li {
+	padding-bottom: 30px;
+}
+
+.design-selection li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  text-decoration: underline;
+  width: 300px;
+  border-bottom: 1px dotted #333;
+  padding-top: 8px;
+}
+
+.design-selection li a {
+  text-decoration: none;
+}
+
+/*
+ * main body of text
+ */
+
+.main.supporting {
+	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #FFFEFD;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+	padding-left: 50px;
+	padding-right: 300px;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+	.explanation,
+	.participation,
+	.benefits,
+	.requirements {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.requirements {
+  background: #FFE5E4;
+}
+
+.benefits {
+  background: ghostwhite;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-right: 50px;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 500px;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+  .benefits {
+    padding-left: 20px;
+		padding-right: 20px;
+  }
+}
+
+.benefits p {
+  width: 70%;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+  .benefits p {
+    width: 100%;
+  }
+}
+
+.zen-resources {
+	height: 300px;
+	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: ghostwhite;
+}
+
+.zen-resources a {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 2px solid #333;
+	transition: 0.3s ease-in;
+}
+
+.zen-resources a:hover {
+	color: ghostwhite;
+	text-decoration: none;
+	background: #333;
+	transition: 0.3s ease-in;
+}
+
+.zen-resources li {
+	display: inline-block;
+	padding: 10px;
+}
+
+.zen-resources h3 {
+	padding-bottom: 20px;
+}
+
+footer {
+	background-color: #E5CECD;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+	justify-content: space-around;
+}
+
+footer a {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 2px solid #333;
+	transition: 0.3s ease-in;
+}
+
+footer a:hover {
+	color: #E8C3DC;
+	background-color: #333;
+	transition: 0.3s ease-in;
+}
